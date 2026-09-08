@@ -22,13 +22,14 @@ public class MainActivity extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         TextView textView = findViewById(R.id.textView);
         Button button2 = findViewById(R.id.button2);
+        Button button3 = findViewById(R.id.button3);
 
 
-        button.setOnClickListener(v -> {
-            textView.setText("Hello World");
-        });
+        button.setOnClickListener(v -> {textView.setText("Hello World");});
 
         button2.setOnClickListener(v -> {textView.setTextColor(Color.GREEN);});
+
+        button3.setOnClickListener(v -> {textView.setBackgroundColor(Color.YELLOW);});
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
